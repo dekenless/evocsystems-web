@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Focus - evoc systems</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="/">
+                <img src="/images/evoc%20logo%20web.jpg" alt="evoc systems" />
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="site-nav" id="siteNav">
+                <a href="/">home</a>
+                <a href="/about.html">about us</a>
+                <a href="/services.html">services</a>
+                <a href="/industries.html">industries</a>
+                <a href="/technologies.html">technologies</a>
+                <a href="/contact.html" class="nav-cta">contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Our Focus</h1>
+                <p>design &amp; development, audit, and analytics</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <nav class="focus-nav">
+                    <a href="/our-focus.html" class="active">overview</a>
+                    <a href="/our-focus/design.html">design &amp; development</a>
+                    <a href="/our-focus/audit.html">audit</a>
+                    <a href="/our-focus/analytics.html">analytics</a>
+                </nav>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Design &amp; Development</h3>
+                        <p>
+                            Software development across Agile, Scrum and Waterfall methodologies — plus
+                            database design and quality assurance.
+                        </p>
+                        <a class="card-link" href="/our-focus/design.html">read more &rarr;</a>
+                    </div>
+                    <div class="card">
+                        <h3>Audit</h3>
+                        <p>
+                            A thorough audit of your application or solution to expose potential problems
+                            before they turn into catastrophes.
+                        </p>
+                        <a class="card-link" href="/our-focus/audit.html">read more &rarr;</a>
+                    </div>
+                    <div class="card">
+                        <h3>Analytics</h3>
+                        <p>
+                            Enterprise-level Business Intelligence and analytical reporting solutions,
+                            built on your data or your existing repositories.
+                        </p>
+                        <a class="card-link" href="/our-focus/analytics.html">read more &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <nav class="footer-nav">
+                <a href="/">home</a>
+                <a href="/about.html">about us</a>
+                <a href="/services.html">services</a>
+                <a href="/industries.html">industries</a>
+                <a href="/technologies.html">technologies</a>
+                <a href="/contact.html">contact</a>
+            </nav>
+            <p class="copyright">&copy; evoc systems inc. <span class="year"></span> — all rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var btn = document.getElementById('navToggle');
+            var nav = document.getElementById('siteNav');
+            btn.addEventListener('click', function () {
+                var open = nav.classList.toggle('open');
+                btn.setAttribute('aria-expanded', open);
+            });
+            document.querySelectorAll('.year').forEach(function (el) { el.textContent = new Date().getFullYear(); });
+        })();
+    </script>
+</body>
+</html>

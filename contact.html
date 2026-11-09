@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - evoc systems</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="/">
+                <img src="/images/evoc%20logo%20web.jpg" alt="evoc systems" />
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="site-nav" id="siteNav">
+                <a href="/">home</a>
+                <a href="/about.html">about us</a>
+                <a href="/services.html">services</a>
+                <a href="/industries.html">industries</a>
+                <a href="/technologies.html">technologies</a>
+                <a href="/contact.html" class="active nav-cta">contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Tell us about your project — we'll get back to you.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container contact-grid">
+                <div class="contact-form-wrap">
+                    <!--
+                        FORM SETUP: create a free form at https://formspree.io (or Web3Forms),
+                        then replace YOUR_FORM_ID below with the ID it gives you.
+                        Submissions are emailed to the address you register there.
+                    -->
+                    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" autocomplete="name" required />
+
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required />
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+
+                        <input type="hidden" name="_subject" value="New enquiry from evocsystems website" />
+                        <button type="submit" class="btn">send message</button>
+                        <p class="form-note">Your message is sent securely via our form provider.</p>
+                    </form>
+                </div>
+                <div class="contact-aside">
+                    <img src="/images/Contact.jpg" alt="Contact evoc systems" />
+                    <div class="contact-meta">
+                        <h3>evoc systems inc.</h3>
+                        <p>Software consulting — design, development, audit and analytics.</p>
+                        <p class="text-muted">Serving clients across Canada since 1996.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <nav class="footer-nav">
+                <a href="/">home</a>
+                <a href="/about.html">about us</a>
+                <a href="/services.html">services</a>
+                <a href="/industries.html">industries</a>
+                <a href="/technologies.html">technologies</a>
+                <a href="/contact.html">contact</a>
+            </nav>
+            <p class="copyright">&copy; evoc systems inc. <span class="year"></span> — all rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var btn = document.getElementById('navToggle');
+            var nav = document.getElementById('siteNav');
+            btn.addEventListener('click', function () {
+                var open = nav.classList.toggle('open');
+                btn.setAttribute('aria-expanded', open);
+            });
+            document.querySelectorAll('.year').forEach(function (el) { el.textContent = new Date().getFullYear(); });
+        })();
+    </script>
+</body>
+</html>
